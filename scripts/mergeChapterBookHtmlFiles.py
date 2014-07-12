@@ -115,11 +115,12 @@ def group_by_jbj_canon49(source_dir, output_dir):
     merge_multi_books(books2files, multi_books, output_dir, 'The Twelve')
     multi_books_processed += multi_books
 
+    books2titles = get_books2titles()
     for book in books2files:
         if book in multi_books_processed:
             continue
         output_file = get_output_file(output_dir, book)
-        merge_files_in_order(books2files[book], book, output_file)
+        merge_files_in_order(books2files[book], books2titles[book], output_file)
 
 
 def get_list_item_nav(text, file_name, anchor):
