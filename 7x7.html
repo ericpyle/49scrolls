@@ -1,0 +1,156 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <style>
+        .tnav .tnav-divs, .tnav .tnav-sections {
+            overflow: auto;
+            -webkit-overflow-scrolling: touch;
+            padding: 4px;
+        }
+
+        * {
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+
+        .tnav .tnav-div:hover {
+border-bottom-color: #ccc;
+}
+        .tnav {
+            /* width: 320px; */
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 100;
+            background: #fff;
+            padding: 0;
+            font-family: Avenir,Helvetica,Arial;
+            font-size: 14px;
+            -x-border: solid 1px #ccc;
+            /*box-shadow: 0 0 10px rgba(0,0,0,0.5),0 0 30px #EEE inset;*/
+        }
+
+        .tnav .tnav-div {
+float: left;
+width: 38px;
+height: 38px;
+margin: 1px 1px 0 0;
+border: solid 1px transparent;
+background: #eee;
+color: #333;
+text-align: center;
+padding: 10px 0 0;
+cursor: pointer;
+}
+
+            .tnav .divisionid-GN, .tnav .divisionid-EX, .tnav .divisionid-LV, .tnav .divisionid-NU, .tnav .divisionid-DT {
+                background: #efe;
+            }
+
+            .tnav .divisionid-JS, .tnav .divisionid-JG, .tnav .divisionid-RT, .tnav .divisionid-S1, .tnav .divisionid-S2, .tnav .divisionid-K1, .tnav .divisionid-K2, .tnav .divisionid-R1, .tnav .divisionid-R2, .tnav .divisionid-ER, .tnav .divisionid-NH, .tnav .divisionid-ET {
+                background: #eef;
+            }
+
+            .tnav .divisionid-JB, .tnav .divisionid-PS, .tnav .divisionid-PR, .tnav .divisionid-EC, .tnav .divisionid-SS, .tnav .divisionid-LM {
+                background: #fef;
+            }
+            .tnav .divisionid-HS, .tnav .divisionid-JL, .tnav .divisionid-AM, .tnav .divisionid-OB, .tnav .divisionid-JH, .tnav .divisionid-MC, .tnav .divisionid-NM, .tnav .divisionid-HK, .tnav .divisionid-ZP, .tnav .divisionid-HG, .tnav .divisionid-ZC, .tnav .divisionid-ML {
+background: #ffe;
+}
+            .tnav .divisionid-MT, .tnav .divisionid-MK, .tnav .divisionid-LK, .tnav .divisionid-JN {
+background: #fee;
+}
+            .tnav .tnav-div-header {
+clear: both;
+height: 30px;
+padding: 10px 0 0 5px;
+font-weight: bold;
+}
+    </style>
+</head>
+<body>
+    <div class="tnav nav-drop-list" style="display: block; height: 162px; top: 110px; left: 10px;">
+        <div class="tnav-header"><span class="tnav-title">49 Scrolls </span>
+            <span class="tnav-back" style="display: none;">Back</span>
+            <span class="tnav-close" style="display: none;">Close</span>
+            </div>
+        <div class="tnav-divs" style="height: 324px;" dir="ltr" lang="eng">
+            <span class="tnav-div divisionid-FR" data-id="FR" data-chapters="1" data-name="Pre">Pre</span>
+            
+            <div class="tnav-div-header">Old Testament</div>
+            <span class="tnav-div divisionid-GN" data-id="GN" data-chapters="50" data-name="Genesis">Gen</span>
+            <span class="tnav-div divisionid-EX" data-id="EX" data-chapters="40" data-name="Exodus">Exo</span>
+            <span class="tnav-div divisionid-LV" data-id="LV" data-chapters="27" data-name="Leviticus">Lev</span>
+            <span class="tnav-div divisionid-NU" data-id="NU" data-chapters="36" data-name="Numbers">Num</span>
+            <span class="tnav-div divisionid-DT" data-id="DT" data-chapters="34" data-name="Deuteronomy">Deu</span>
+            <span class="tnav-div divisionid-JS" data-id="JS" data-chapters="24" data-name="Joshua">Jos</span>
+            <span class="tnav-div divisionid-JG" data-id="JG" data-chapters="21" data-name="Judges">Jud</span>
+            <span class="tnav-div divisionid-RT" data-id="RT" data-chapters="4" data-name="Ruth">Rut</span>
+            <span class="tnav-div divisionid-S1" data-id="S1" data-chapters="31" data-name="1 Samuel">1Sa</span>
+            <span class="tnav-div divisionid-S2" data-id="S2" data-chapters="24" data-name="2 Samuel">2Sa</span>
+            <span class="tnav-div divisionid-K1" data-id="K1" data-chapters="22" data-name="1 Kings">1Ki</span>
+            <span class="tnav-div divisionid-K2" data-id="K2" data-chapters="25" data-name="2 Kings">2Ki</span>
+            <span class="tnav-div divisionid-R1" data-id="R1" data-chapters="29" data-name="1 Chronicles">1Ch</span>
+            <span class="tnav-div divisionid-R2" data-id="R2" data-chapters="36" data-name="2 Chronicles">2Ch</span>
+            <span class="tnav-div divisionid-ER" data-id="ER" data-chapters="10" data-name="Ezra">Ezr</span>
+            <span class="tnav-div divisionid-NH" data-id="NH" data-chapters="13" data-name="Nehemiah">Neh</span>
+            <span class="tnav-div divisionid-ET" data-id="ET" data-chapters="10" data-name="Esther">Est</span>
+            <span class="tnav-div divisionid-JB" data-id="JB" data-chapters="42" data-name="Job">Job</span>
+            <span class="tnav-div divisionid-PS" data-id="PS" data-chapters="150" data-name="Psalms">Psa</span>
+            <span class="tnav-div divisionid-PR" data-id="PR" data-chapters="31" data-name="Proverbs">Pro</span>
+            <span class="tnav-div divisionid-EC" data-id="EC" data-chapters="12" data-name="Ecclesiastes">Ecc</span>
+            <span class="tnav-div divisionid-SS" data-id="SS" data-chapters="8" data-name="Song of Solomon">Son</span>
+            <span class="tnav-div divisionid-IS" data-id="IS" data-chapters="66" data-name="Isaiah">Isa</span>
+            <span class="tnav-div divisionid-JR" data-id="JR" data-chapters="52" data-name="Jeremiah">Jer</span>
+            <span class="tnav-div divisionid-LM" data-id="LM" data-chapters="5" data-name="Lamentations">Lam</span>
+            <span class="tnav-div divisionid-EK" data-id="EK" data-chapters="48" data-name="Ezekiel">Eze</span>
+            <span class="tnav-div divisionid-DN" data-id="DN" data-chapters="12" data-name="Daniel">Dan</span>
+            <span class="tnav-div divisionid-HS" data-id="HS" data-chapters="14" data-name="Hosea">Hos</span>
+            <span class="tnav-div divisionid-JL" data-id="JL" data-chapters="3" data-name="Joel">Joe</span>
+            <span class="tnav-div divisionid-AM" data-id="AM" data-chapters="9" data-name="Amos">Amo</span>
+            <span class="tnav-div divisionid-OB" data-id="OB" data-chapters="1" data-name="Obadiah">Oba</span>
+            <span class="tnav-div divisionid-JH" data-id="JH" data-chapters="4" data-name="Jonah">Jon</span>
+            <span class="tnav-div divisionid-MC" data-id="MC" data-chapters="7" data-name="Micah">Mic</span>
+            <span class="tnav-div divisionid-NM" data-id="NM" data-chapters="3" data-name="Nahum">Nah</span>
+            <span class="tnav-div divisionid-HK" data-id="HK" data-chapters="3" data-name="Habakkuk">Hab</span>
+            <span class="tnav-div divisionid-ZP" data-id="ZP" data-chapters="3" data-name="Zephaniah">Zep</span>
+            <span class="tnav-div divisionid-HG" data-id="HG" data-chapters="2" data-name="Haggai">Hag</span>
+            <span class="tnav-div divisionid-ZC" data-id="ZC" data-chapters="14" data-name="Zechariah">Zec</span>
+            <span class="tnav-div divisionid-ML" data-id="ML" data-chapters="4" data-name="Malachi">Mal</span>
+            <div class="tnav-div-header">New Testament</div>
+            <span class="tnav-div divisionid-MT" data-id="MT" data-chapters="28" data-name="Matthew">Mat</span>
+            <span class="tnav-div divisionid-MK" data-id="MK" data-chapters="16" data-name="Mark">Mar</span>
+            <span class="tnav-div divisionid-LK" data-id="LK" data-chapters="24" data-name="Luke">Luk</span>
+            <span class="tnav-div divisionid-JN" data-id="JN" data-chapters="21" data-name="John">Joh</span>
+            <span class="tnav-div divisionid-AC" data-id="AC" data-chapters="28" data-name="Acts">Act</span>
+            <span class="tnav-div divisionid-RM" data-id="RM" data-chapters="16" data-name="Romans">Rom</span>
+            <span class="tnav-div divisionid-C1" data-id="C1" data-chapters="16" data-name="1 Corinthians">1Co</span>
+            <span class="tnav-div divisionid-C2" data-id="C2" data-chapters="13" data-name="2 Corinthians">2Co</span>
+            <span class="tnav-div divisionid-GL" data-id="GL" data-chapters="6" data-name="Galatians">Gal</span>
+            <span class="tnav-div divisionid-EP" data-id="EP" data-chapters="6" data-name="Ephesians">Eph</span>
+            <span class="tnav-div divisionid-PP" data-id="PP" data-chapters="4" data-name="Philippians">Phi</span>
+            <span class="tnav-div divisionid-CL" data-id="CL" data-chapters="4" data-name="Colossians">Col</span>
+            <span class="tnav-div divisionid-H1" data-id="H1" data-chapters="5" data-name="1 Thessalonians">1Th</span>
+            <span class="tnav-div divisionid-H2" data-id="H2" data-chapters="3" data-name="2 Thessalonians">2Th</span>
+            <span class="tnav-div divisionid-T1" data-id="T1" data-chapters="6" data-name="1 Timothy">1Ti</span>
+            <span class="tnav-div divisionid-T2" data-id="T2" data-chapters="4" data-name="2 Timothy">2Ti</span>
+            <span class="tnav-div divisionid-TT" data-id="TT" data-chapters="3" data-name="Titus">Tit</span>
+            <span class="tnav-div divisionid-PM" data-id="PM" data-chapters="1" data-name="Philemon">Phi</span>
+            <span class="tnav-div divisionid-HB" data-id="HB" data-chapters="13" data-name="Hebrews">Heb</span>
+            <span class="tnav-div divisionid-JM" data-id="JM" data-chapters="5" data-name="James">Jam</span>
+            <span class="tnav-div divisionid-P1" data-id="P1" data-chapters="5" data-name="1 Peter">1Pe</span>
+            <span class="tnav-div divisionid-P2" data-id="P2" data-chapters="3" data-name="2 Peter">2Pe</span>
+            <span class="tnav-div divisionid-J1" data-id="J1" data-chapters="5" data-name="1 John">1Jo</span>
+            <span class="tnav-div divisionid-J2" data-id="J2" data-chapters="1" data-name="2 John">2Jo</span>
+            <span class="tnav-div divisionid-J3" data-id="J3" data-chapters="1" data-name="3 John">3Jo</span>
+            <span class="tnav-div divisionid-JD" data-id="JD" data-chapters="1" data-name="Jude">Jud</span>
+            <span class="tnav-div divisionid-RV" data-id="RV" data-chapters="22" data-name="Revelation">Rev</span>
+            
+
+        </div>
+    </div>
+
+</body>
+</html>
