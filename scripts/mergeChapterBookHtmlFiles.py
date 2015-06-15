@@ -169,12 +169,11 @@ def add_nav_divs(output_file, etree_main):
     bottom_nav = get_nav(book_code=next_book_code, group_anchor=book_group, book_anchor='')
     etree_main.addnext(bottom_nav)
 
-
 def merge_files_in_order(html_files, title, output_file):
     # rel="stylesheet" href="arl.css" type="text/css">
     etree_setup = (
         E.html(
-            E.head(E.title(title), E.link({'rel': 'stylesheet', 'href': '49scrolls.css', 'type': 'text/css'})),
+            E.head(E.title(title), E.meta({'name': 'viewport', 'content': 'width=device-width, initial-scale=1.0'}), E.link({'rel': 'stylesheet', 'href': '49scrolls.css', 'type': 'text/css'})),
             E.body(E.div({'class': 'main'}))
         )
     )
