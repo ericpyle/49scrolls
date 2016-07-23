@@ -129,7 +129,7 @@ def get_list_item_nav(text, file_name, anchor):
     return E.li(E.a(text, {'href': '{}{}'.format(file_name, anchor)}))
 
 
-def get_nav(book_code, group_anchor, book_anchor):
+def get_nav(book_code, group_anchor, book_anchor, nav_id):
     book_title = ''
     book_link = ''
     if book_code is not None:
@@ -137,7 +137,7 @@ def get_nav(book_code, group_anchor, book_anchor):
         book_title = books2titles[book_code]
         book_link = '{}.html'.format(book_code)
     return E.ul(get_list_item_nav(group_anchor, 'index.html', '#' + group_anchor),
-                get_list_item_nav(book_title, book_link, anchor='#' + book_anchor), {'class': 'tnav'})
+                get_list_item_nav(book_title, book_link, anchor='#' + book_anchor), {'class': 'tnav', 'id': nav_id})
 
 
 def get_book_group(book_code):
@@ -164,9 +164,9 @@ def add_nav_divs(output_file, etree_main):
     book_code, _ = book_file_name.split('.', 1)
     book_group = get_book_group(book_code)
     previous_book_code, next_book_code = get_surrounding_books(book_code)
-    top_nav = get_nav(book_code=previous_book_code, group_anchor=book_group, book_anchor='bottom')
+    top_nav = get_nav(book_code=previous_book_code, group_anchor=book_group, book_anchor='bottom', nav_id='top')
     etree_main.addprevious(top_nav)
-    bottom_nav = get_nav(book_code=next_book_code, group_anchor=book_group, book_anchor='')
+    bottom_nav = get_nav(book_code=next_book_code, group_anchor=book_group, book_anchor='', nav_id='bottom')
     etree_main.addnext(bottom_nav)
 
 def merge_files_in_order(html_files, title, output_file):
@@ -188,14 +188,14 @@ def merge_files_in_order(html_files, title, output_file):
         if len(etree_main) == 0:
             continue
         for div in etree_main[0].findall('./div'):
-            if 'footnote' in div.attrib['class'].split(' '):
+            classes = div.attrib['class'].split(' ')
+            if 'footnote' in classes or 'copyright' in classes:
                 continue
             if div.attrib['class'] == 'b':
                 continue
             output_main.append(div)
-    output_main.append(ET.XML('<a id="bottom"/>'))
     add_nav_divs(output_file, output_main)
-    etree_output.write(output_file)
+    etree_output.write(output_file, pretty_print=True, encoding='UTF-8')
 
 
 if __name__ == "__main__":
